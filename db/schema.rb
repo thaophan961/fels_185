@@ -1,0 +1,84 @@
+# encoding: UTF-8
+# This file is auto-generated from the current state of the database. Instead
+# of editing this file, please use the migrations feature of Active Record to
+# incrementally modify your database, and then regenerate this schema definition.
+#
+# Note that this schema.rb definition is the authoritative source for your
+# database schema. If you need to create the application database on another
+# system, you should be using db:schema:load, not running all the migrations
+# from scratch. The latter is a flawed and unsustainable approach (the more migrations
+# you'll amass, the slower it'll run and the greater likelihood for issues).
+#
+# It's strongly recommended that you check this file into your version control system.
+
+ActiveRecord::Schema.define(version: 20160923081527) do
+
+  create_table "answers", force: :cascade do |t|
+    t.string   "content"
+    t.boolean  "is_correct"
+    t.integer  "word_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "answers", ["word_id"], name: "index_answers_on_word_id"
+
+  create_table "categories", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "quantity_question"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
+
+  create_table "lessons", force: :cascade do |t|
+    t.string   "result"
+    t.integer  "user_id"
+    t.integer  "category_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "lessons", ["category_id"], name: "index_lessons_on_category_id"
+  add_index "lessons", ["user_id"], name: "index_lessons_on_user_id"
+
+  create_table "relationships", force: :cascade do |t|
+    t.integer  "followed"
+    t.integer  "follower"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "relationships", ["followed"], name: "index_relationships_on_followed"
+  add_index "relationships", ["follower", "followed"], name: "index_relationships_on_follower_and_followed", unique: true
+  add_index "relationships", ["follower"], name: "index_relationships_on_follower"
+
+  create_table "results", force: :cascade do |t|
+    t.integer  "lesson_id"
+    t.integer  "answer_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "results", ["answer_id"], name: "index_results_on_answer_id"
+  add_index "results", ["lesson_id"], name: "index_results_on_lesson_id"
+
+  create_table "users", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "password"
+    t.string   "avatar"
+    t.boolean  "is_admin"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "words", force: :cascade do |t|
+    t.string   "content"
+    t.integer  "category_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "words", ["category_id"], name: "index_words_on_category_id"
+
+end
