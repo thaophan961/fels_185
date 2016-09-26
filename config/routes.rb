@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   resources :users
   resources :registers, only: [:new, :create]
   resources :categories, only: :index
-
+  resources :words, only: :index
 end
