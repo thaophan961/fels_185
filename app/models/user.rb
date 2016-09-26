@@ -6,4 +6,12 @@ class User < ActiveRecord::Base
     foreign_key: :followed, dependent: :destroy
   has_many :followeds, through: :active_relationships, source: :followed
   has_many :followers, through: :passive_relationships, source: :follower
+  has_secure_password
+  mount_uploader :avatar, AvatarUploader
+
+  validates :name, presence: true, length: {maximum: 50}
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
+  validates :email, presence: true, length: {maximum: 255},
+    format: {with: VALID_EMAIL_REGEX}, uniqueness: {case_sensitive: false}
+  validates :password, presence: true, length: {minimum: 6}, allow_nil: true
 end
