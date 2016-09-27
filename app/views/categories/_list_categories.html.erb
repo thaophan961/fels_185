@@ -1,4 +1,10 @@
-<ul class="categories">
-  <%= render @categories %>
-</ul>
+<table class="table table-striped">
+  <thead>
+    <th><%= t "category.title" %></th>
+    <th><%= t "category.quanlity_word" %></th>
+  </thead>
+  <tbody>
+    <%= render @categories %>
+  </tbody>
+</table>
 <%= will_paginate %>

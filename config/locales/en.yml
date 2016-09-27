@@ -16,6 +16,11 @@ en:
   show_user: "show_user"
   category:
     categories: "Categories"
+    search_categories: "Search categories by title"
+    search: "Search"
+    title: "Title"
+    quanlity_word: "Quanlity word in a lesson"
+    start_lesson: "Start Lesson"
   word:
     list_words: "List words"
     word: "Word"
