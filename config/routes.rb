@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
-  get "static_pages/home"
+
+  root "static_pages#home"
+  get "sign_up" => "registers#new"
+  resources :users
+  resources :registers, only: [:new, :create]
   resources :categories, only: :index
+
 end

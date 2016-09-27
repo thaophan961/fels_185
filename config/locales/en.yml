@@ -6,6 +6,12 @@ en:
   warning_login: "Please sign up or sign in to view!!!"
   home: "Home"
   sign_up: "Sign up"
+  sign_up_user: "signup"
   sign_in: "Sign in"
   category:
     categories: "Categories"
+  create: "Create my account"
+  helloname: "Hello %{name}"
+  error_content: "The form contains"
+  not_found: "Not fount"
+  error: "Error"
