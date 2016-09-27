@@ -14,4 +14,16 @@ class User < ActiveRecord::Base
   validates :email, presence: true, length: {maximum: 255},
     format: {with: VALID_EMAIL_REGEX}, uniqueness: {case_sensitive: false}
   validates :password, presence: true, length: {minimum: 6}, allow_nil: true
+  has_secure_password
+
+  before_save :downcase_email
+
+  def forget
+    update_attributes(remember_digest: nil)
+  end
+
+  private
+  def downcase_email
+    self.email = email.downcase
+  end
 end
