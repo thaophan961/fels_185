@@ -8,11 +8,15 @@ en:
   sign_up: "Sign up"
   sign_up_user: "signup"
   sign_in: "Sign in"
-  category:
-    categories: "Categories"
   create: "Create my account"
   helloname: "Hello %{name}"
   error_content: "The form contains"
   not_found: "Not fount"
   error: "Error"
   show_user: "show_user"
+  category:
+    categories: "Categories"
+  word:
+    list_words: "List words"
+    word: "Word"
+    mean: "Meaning of word"
