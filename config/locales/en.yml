@@ -35,3 +35,9 @@ en:
     list_words: "List words"
     word: "Word"
     mean: "Meaning of word"
+  update:
+    button: "Save changes"
+    message: "Profile updated"
+    title_page: "Edit user"
+    title: "Update your profile"
+    confirmation: "Confirmation"
