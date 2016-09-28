@@ -48,3 +48,6 @@ en:
   lesson:
     success_create: "Start Lesson is success. Good luck to you!"
     fail_create: "Has a fail create, cannot create Lesson!!!"
+  index_user:
+    message: "Please log in."
+    title: "All users"
