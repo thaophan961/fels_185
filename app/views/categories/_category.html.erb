@@ -1,9 +1,9 @@
-<li class="category-<%= category.id %>">
-  <div class="row">
-    <span class="col-md-8">
-      <div class="categoryTitle">
-        <b><%= category.title %></b>
-      </div>
-    </span>
-  </div>
-</li>
+<tr>
+  <th><%= category.title %></th>
+  <th><%= category.quantity_question %></th>
+  <th>
+    <button type="button" class="btn-primary">
+      <%= t "start_lesson" %>
+    </button>
+  </th>
+</tr>

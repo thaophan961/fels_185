@@ -1,4 +1,8 @@
 <% provide :title, t("category.categories") %>
-<div id="categories_filter">
-  <%= render "list_categories" %>
+<div class="container">
+  <%= render "search_index_categories" %>
+  <h2 class="word-list"><%= t "list_categories" %></h2>
+  <div id ="categories_filter">
+    <%= render "list_categories" %>
+  </div>
 </div>
