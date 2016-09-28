@@ -4,4 +4,5 @@ class Word < ActiveRecord::Base
   validates :content, presence: true,
     length: {maximum: Settings.maximum_length_content_word}
   scope :recent, ->{order "created_at DESC"}
+  scope :random, ->{order "RANDOM()"}
 end

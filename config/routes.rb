@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   resources :registers, only: [:new, :create]
   resources :categories, only: :index
   resources :words, only: :index
+  resources :lessons
 end

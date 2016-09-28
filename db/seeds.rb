@@ -5,7 +5,7 @@ end
 
 30.times do |n|
   content = "Word_#{n+1}"
-  Word.create!(content: content, category_id: 1)
+  Word.create!(content: content, category_id: 15)
 
   4.times do |m|
     content = "Answer_#{m+1}"
