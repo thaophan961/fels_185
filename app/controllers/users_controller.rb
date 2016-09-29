@@ -16,6 +16,11 @@ class UsersController < ApplicationController
     end
   end
 
+  def index
+    @users = User.alphabet.paginate page: params[:page],
+      per_page: Settings.per_page
+  end
+
   private
   def load_user
     @user = User.find_by id: params[:id]
