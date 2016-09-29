@@ -28,6 +28,7 @@ en:
   btn_lesson: "Start Lesson"
   activities: "Activities"
   view_profile: "View my profile"
+  delete: "delete"
   category:
     categories: "Categories"
     search_categories: "Search categories by title"
@@ -51,3 +52,12 @@ en:
   index_user:
     message: "Please log in."
     title: "All users"
+  admin:
+    message: "Not admin"
+    destroy_message: "User deleted"
+    destroy_error: "Delete unsuccess"
+    destroy_confirm: "You sure?"
+    management_user: "User management"
+    management_category: "Category management"
+    management_word: "Word management"
+    role: "Admin"
