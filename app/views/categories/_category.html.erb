@@ -2,8 +2,10 @@
   <th><%= category.title %></th>
   <th><%= category.quantity_question %></th>
   <th>
-    <button type="button" class="btn-primary">
-      <%= t "start_lesson" %>
-    </button>
+    <%= form_for @lesson do |f| %>
+      <%= f.hidden_field :category_id, value: category.id %>
+      <%= f.submit t("category.start_lesson"),
+        class: "btn btn-primary btn-category" %>
+    <% end %>
   </th>
 </tr>

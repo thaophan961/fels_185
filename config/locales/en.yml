@@ -24,6 +24,10 @@ en:
   setting: "Setting"
   logout: "Log out"
   login: "Log in"
+  btn_word: "Word List"
+  btn_lesson: "Start Lesson"
+  activities: "Activities"
+  view_profile: "View my profile"
   category:
     categories: "Categories"
     search_categories: "Search categories by title"
@@ -41,3 +45,6 @@ en:
     title_page: "Edit user"
     title: "Update your profile"
     confirmation: "Confirmation"
+  lesson:
+    success_create: "Start Lesson is success. Good luck to you!"
+    fail_create: "Has a fail create, cannot create Lesson!!!"
