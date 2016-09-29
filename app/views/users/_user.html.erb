@@ -1,4 +1,9 @@
 <li>
   <%= image_tag user.avatar.url, class: "image" %>
-  <h3><%= link_to user.name, user %></h3>
+  <h3><%= link_to user.name, user %>
+    <% if current_user.is_admin? && !current_user?(user) %>
+      | <%= link_to t("delete"), user, method: :delete,
+        data: {confirm: t("admin.destroy_confirm")} %>
+    <% end %>
+  </h3>
 </li>

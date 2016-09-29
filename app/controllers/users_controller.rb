@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :load_user, except: [:index, :new, :create]
+  before_action :check_admin, only: :destroy
 
   def show
   end
@@ -21,6 +22,15 @@ class UsersController < ApplicationController
       per_page: Settings.per_page
   end
 
+  def destroy
+    if @user.destroy
+      flash[:success] = t "admin.destroy_message"
+    else
+      flash[:danger] = t "admin.message"
+    end
+    redirect_to users_path
+  end
+
   private
   def load_user
     @user = User.find_by id: params[:id]
@@ -33,6 +43,13 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit :name, :email, :password,
       :password_confirmation, :avatar
+  end
+
+  def check_admin
+    unless current_user.is_admin?
+      flash[:danger] = t "admin.message"
+      redirect_to root_url
+    end
   end
 
 end
