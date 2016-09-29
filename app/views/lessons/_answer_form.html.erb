@@ -1,0 +1,12 @@
+<li>
+  <hr class="answer">
+  <strong><%= form.object.word.content %></strong>
+  <ul>
+    <% form.object.word.answers.alphabel.each do |answer| %>
+      <li>
+        <%= form.radio_button :answer_id, answer.id %>
+        <%= answer.content %>
+      </li>
+    <% end %>
+  </ul>
+</li>

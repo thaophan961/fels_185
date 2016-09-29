@@ -3,3 +3,4 @@ maximum_length_content_word: 200
 per_page: 5
 quanlity_question: 5
 per_page_words: 10
+answer_count: 0

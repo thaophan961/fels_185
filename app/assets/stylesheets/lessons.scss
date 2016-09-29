@@ -1,0 +1,52 @@
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #eeeeee;
+  box-sizing: content-box;
+  height: 0;
+}
+
+ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+li {
+  padding-left: 10px;
+  text-indent: -10px;
+}
+
+li:before {
+  content: none;
+  padding-right: 5px;
+}
+
+.large {
+  width: 100px;
+}
+
+.lesson {
+  width: 80%;
+}
+
+.fixedElement {
+  background-color: #5cb85c;
+  position: fixed;
+  margin-top: 10px;
+  margin-left: 1000px;
+  width: 7%;
+  z-index: 100;
+  text-align: center;
+  float: right;
+  color: white;
+  h2 {
+    font-size: 25px;
+    margin-top: 0;
+  }
+  h3 {
+    margin-bottom: 0;
+    font-size: 15px;
+  }
+}
