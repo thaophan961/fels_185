@@ -29,6 +29,7 @@ en:
   activities: "Activities"
   view_profile: "View my profile"
   delete: "delete"
+  symbol: "/"
   category:
     categories: "Categories"
     search_categories: "Search categories by title"
@@ -56,6 +57,10 @@ en:
     not_found: "Lesson was not found!!!"
     finish_alert: "Are you sure you want to finish the lesson?
       This cannot be undone!"
+    lesson_result: "Lesson result: "
+    wrong: "Wrong answer"
+    correct: "Correct answer"
+    correct_answer: "Correct answer is: "
   index_user:
     message: "Please log in."
     title: "All users"
