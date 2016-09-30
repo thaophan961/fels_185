@@ -47,8 +47,15 @@ en:
     title: "Update your profile"
     confirmation: "Confirmation"
   lesson:
-    success_create: "Start Lesson is success. Good luck to you!"
-    fail_create: "Has a fail create, cannot create Lesson!!!"
+    success_create_message: "Start Lesson is success. Good luck to you!"
+    fail_create_message: "Has a fail create, cannot create Lesson!!!"
+    finish_message: "Lesson is done. Please check your answers below!"
+    lesson_date: "Lesson date: "
+    finish: "Finish"
+    progress: "Progress"
+    not_found: "Lesson was not found!!!"
+    finish_alert: "Are you sure you want to finish the lesson?
+      This cannot be undone!"
   index_user:
     message: "Please log in."
     title: "All users"
@@ -61,3 +68,6 @@ en:
     management_category: "Category management"
     management_word: "Word management"
     role: "Admin"
+  time:
+    formats:
+      date_exam: "%d/%m/%Y %H:%M"
