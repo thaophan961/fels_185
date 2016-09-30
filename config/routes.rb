@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
 
+  namespace :admin do
+    root "users#index", path: "/"
+    resources :users, only: [:edit, :update, :index]
+  end
+
   root "static_pages#home"
   get "sessions/new"
   get "sign_up" => "registers#new"

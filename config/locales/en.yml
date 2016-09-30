@@ -34,6 +34,7 @@ en:
   symbol_hyphen: "-"
   learn: "Learn"
   create_lesson: "created at"
+  edit: "edit"
   category:
     categories: "Categories"
     search_categories: "Search categories by title"
@@ -69,7 +70,8 @@ en:
     message: "Please log in."
     title: "All users"
   admin:
-    message: "Not admin"
+    check_current_admin_message: "You can's update your role"
+    message: "You have to admin"
     destroy_message: "User deleted"
     destroy_error: "Delete unsuccess"
     destroy_confirm: "You sure?"
@@ -77,6 +79,9 @@ en:
     management_category: "Category management"
     management_word: "Word management"
     role: "Admin"
+    result:
+      success: "success"
+      failed: "failed"
   time:
     formats:
       date_exam: "%d/%m/%Y %H:%M"
