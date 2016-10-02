@@ -35,10 +35,13 @@ en:
   learn: "Learn"
   create_lesson: "created at"
   edit: "edit"
+  search: "Search"
+  all: "All"
+  filter: "Filter"
+  get_all: "get_all"
   category:
     categories: "Categories"
     search_categories: "Search categories by title"
-    search: "Search"
     title: "Title"
     quanlity_word: "Quanlity word in a lesson"
     start_lesson: "Start Lesson"
@@ -46,6 +49,7 @@ en:
     list_words: "List words"
     word: "Word"
     mean: "Meaning of word"
+    search_word: "Search words by condition"
   update:
     button: "Save changes"
     message: "Profile updated"
