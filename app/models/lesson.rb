@@ -6,6 +6,7 @@ class Lesson < ActiveRecord::Base
   has_many :words, through: :results
   accepts_nested_attributes_for :results
   before_create :build_results
+  delegate :title, to: :category, allow_nil: true
 
   private
   def build_results

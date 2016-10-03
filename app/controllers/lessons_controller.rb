@@ -1,6 +1,10 @@
 class LessonsController < ApplicationController
   before_action :logged_in_user
-  before_action :load_lesson, only: [:edit, :update]
+  before_action :load_lesson, only: [:edit, :update, :show]
+
+  def show
+    @results = @lesson.results
+  end
 
   def edit
     @words = @lesson.words
@@ -9,7 +13,7 @@ class LessonsController < ApplicationController
   def update
     if @lesson.update_attributes lesson_params
       flash[:success] = t "lesson.finish_message"
-      redirect_to categories_path
+      redirect_to lesson_path @lesson
     else
       render :edit
     end
