@@ -8,6 +8,12 @@
         <%= t "helloname", name: @user.name %>
       </h3>
     </section>
+    <section class="stats">
+      <%= render "shared/stats" %>
+    </section>
+    <div>
+      <%= render "follow_form" if logged_in? %>
+    </div>
   </aside>
   <aside class="col-md-8 panel panel-success feed_user">
     <div class="panel-heading">
