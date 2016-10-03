@@ -5,22 +5,24 @@
     <% result.word.answers.alphabel.each do |answer| %>
       <li>
         <%= radio_button_tag result.id, answer.id,
-          result.answer_id.to_s == answer.id.to_s, disabled: true %>
+          result.answer_id == answer.id, disabled: true %>
         <%= answer.content %>
       </li>
     <% end %>
   </ul>
-  <% if result.answer.is_correct %>
-    <p id="correct" class="label label-primary">
-    <%= t "lesson.correct" %></p>
-  <% else %>
-    <p class="label label-danger"><%= t "lesson.wrong" %></p>
-    <p><%= t "lesson.correct_answer" %>
-      <strong>
-        <% result.word.answers.each do |answer| %>
-          <%= answer.content if answer.is_correct %>
-        <% end %>
-      </strong>
-    </p>
+  <% if result.answer.present? %>
+    <% if result.answer.is_correct %>
+      <p id="correct" class="label label-primary">
+      <%= t "lesson.correct" %></p>
+    <% else %>
+      <p class="label label-danger"><%= t "lesson.wrong" %></p>
+      <p><%= t "lesson.correct_answer" %>
+        <strong>
+          <% result.word.answers.each do |answer| %>
+            <%= answer.content if answer.is_correct %>
+          <% end %>
+        </strong>
+      </p>
+    <% end %>
   <% end %>
 </li>

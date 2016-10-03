@@ -1,0 +1,18 @@
+<li id="lesson-<%= lesson.id %>">
+  <p>
+    <%= link_to image_tag(lesson.user.avatar.url,
+      class: "image_avatar"), lesson.user %>
+    <%= link_to lesson do %>
+      <span class="content">
+        <%= t "learn" %>
+        <%= lesson.results.count %>
+        <%= t "words_in_lesson" %>
+        <%= lesson.title %>
+        <%= t "symbol_hyphen" %>
+        <%= t "create_lesson" %>
+        <%= l lesson.created_at, format: :date_create %>
+      </span>
+    <% end %>
+  </p>
+  <hr>
+</li>

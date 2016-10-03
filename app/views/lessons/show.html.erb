@@ -7,7 +7,7 @@
       </p>
       <span><%= t "lesson.lesson_result" %></span>
       <span class="show_score">
-        <span id="correct_count"></span>
+        <%= @lesson.score %>
         <%= t "symbol" %>
         <%= @results.count %>
       </span>
