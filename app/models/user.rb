@@ -23,6 +23,10 @@ class User < ActiveRecord::Base
     update_attributes(remember_digest: nil)
   end
 
+  def feed_activities
+    Lesson.feed_activities id
+  end
+
   private
   def downcase_email
     self.email = email.downcase

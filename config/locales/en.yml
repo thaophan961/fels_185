@@ -30,6 +30,10 @@ en:
   view_profile: "View my profile"
   delete: "delete"
   symbol: "/"
+  words_in_lesson: "words in Lesson"
+  symbol_hyphen: "-"
+  learn: "Learn"
+  create_lesson: "created at"
   category:
     categories: "Categories"
     search_categories: "Search categories by title"
@@ -76,3 +80,4 @@ en:
   time:
     formats:
       date_exam: "%d/%m/%Y %H:%M"
+      date_create: "%d/%m/%Y"

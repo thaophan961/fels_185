@@ -1,0 +1,6 @@
+<% if @activities.any? %>
+  <ul>
+    <%= render @activities %>
+  </ul>
+  <%= will_paginate @activities %>
+<% end %>

@@ -17,13 +17,12 @@
             class: "btn btn-primary btn-large" %>
         </aside>
       </div>
-
       <div class="col-md-8 panel panel-success">
         <div class="panel-heading">
           <h1 class="panel-title title_header"><%= t "activities" %></h1>
         </div>
         <div class="panel-body title_body">
-          <p><%= t "activities" %></p>
+          <%= render "shared/feed_activities" %>
         </div>
       </div>
     </div>

@@ -4,6 +4,8 @@ class UsersController < ApplicationController
   before_action :check_admin, only: :destroy
 
   def show
+    @activities = @user.lessons.recent.paginate page: params[:page],
+      per_page: Settings.per_page_activities
   end
 
   def edit
