@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :logged_in_user
   before_action :load_user, except: [:index, :new, :create]
-  before_action :check_admin, only: :destroy
+  before_action :correct_user, only: [:edit, :update]
 
   def show
     @activities = @user.lessons.recent.paginate page: params[:page],
@@ -54,5 +54,4 @@ class UsersController < ApplicationController
       redirect_to root_url
     end
   end
-
 end
