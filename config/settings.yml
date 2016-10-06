@@ -5,3 +5,9 @@ quanlity_question: 5
 per_page_words: 10
 per_page_activities: 15
 answer_count: 0
+filter_words:
+  learned: "learned"
+  learned_correct: "learned_correct"
+  learned_not_correct: "learned_not_correct"
+  not_learned: "not_learned"
+  get_all: "get_all"
