@@ -13,3 +13,6 @@ end
       is_correct: m == 1 ? 1 : 0, word_id: n)
   end
 end
+
+User.create!(name: "Admin", email: "admin@admin.com", password: "123123",
+  is_admin: true)
