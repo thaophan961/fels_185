@@ -43,6 +43,7 @@ en:
   learned: "Learned"
   words: "words"
   show: "Show"
+  add: "Add Word"
   category:
     categories: "Categories"
     search_categories: "Search categories by title"
