@@ -2,10 +2,13 @@ class UsersController < ApplicationController
   before_action :logged_in_user
   before_action :load_user, except: [:index, :new, :create]
   before_action :correct_user, only: [:edit, :update]
+  before_action :verify_admin, only: [:destroy, :update]
 
   def show
     @activities = @user.lessons.recent.paginate page: params[:page],
       per_page: Settings.per_page_activities
+    @count_following = @user.following.size
+    @count_followers = @user.followers.size
   end
 
   def edit
@@ -35,22 +38,22 @@ class UsersController < ApplicationController
   end
 
   private
-  def load_user
-    @user = User.find_by id: params[:id]
-    unless @user
-      flash[:danger] = t "not_found"
-      redirect_to root_url
-    end
-  end
-
   def user_params
     params.require(:user).permit :name, :email, :password,
       :password_confirmation, :avatar
   end
 
-  def check_admin
+  def verify_admin
     unless current_user.is_admin?
       flash[:danger] = t "admin.message"
+      redirect_to root_url
+    end
+  end
+
+  def load_user
+    @user = User.find_by id: params[:id]
+    unless @user
+      flash[:danger] = t "not_found"
       redirect_to root_url
     end
   end

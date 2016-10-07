@@ -9,7 +9,7 @@ class Lesson < ActiveRecord::Base
   delegate :title, to: :category, allow_nil: true
   scope :recent, ->{order "created_at DESC"}
   scope :feed_activities, ->user_id do
-    where "user_id IN (SELECT followed FROM relationships WHERE follower = ?)
+    where "user_id IN (SELECT followed_id FROM relationships WHERE follower_id = ?)
       OR user_id = ?", user_id, user_id
   end
 

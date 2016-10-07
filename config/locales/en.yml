@@ -90,3 +90,11 @@ en:
     formats:
       date_exam: "%d/%m/%Y %H:%M"
       date_create: "%d/%m/%Y"
+  follow:
+    button_follow: "Follow"
+    button_unfollow: "Unfollow"
+    following:
+      title: "Following"
+    followers:
+      title: "Followers"
+

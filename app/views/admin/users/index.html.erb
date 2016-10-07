@@ -1,7 +1,9 @@
 <% provide :title, t("index_user.title") %>
-<h2><%= t "index_user.title" %></h2>
-<%= will_paginate %>
-<ul class="users">
-  <%= render @users %>
-</ul>
-<%= will_paginate %>
+<div class="center">
+  <h2><%= t "index_user.title" %></h2>
+  <%= will_paginate %>
+  <ul class="users">
+    <%= render @users %>
+  </ul>
+  <%= will_paginate %>
+</div>

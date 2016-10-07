@@ -11,9 +11,15 @@ Rails.application.routes.draw do
   get "sign_in" => "sessions#new"
   post "sign_in" => "sessions#create"
   delete "sign_out" => "sessions#destroy"
-  resources :users
+  resources :users do
+    resources :following, only: :index
+    resources :followers, only: :index
+  end
   resources :registers, only: [:new, :create]
   resources :categories, only: :index
   resources :words, only: :index
   resources :lessons
+  resources :relationships, only: [:create, :destroy]
+  resources :following, only: :index
+  resources :followers, only: :index
 end
