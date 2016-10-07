@@ -39,6 +39,9 @@ en:
   all: "All"
   filter: "Filter"
   get_all: "get_all"
+  symbol_stroke: "|"
+  learned: "Learned"
+  words: "words"
   category:
     categories: "Categories"
     search_categories: "Search categories by title"
@@ -50,6 +53,8 @@ en:
     word: "Word"
     mean: "Meaning of word"
     search_word: "Search words by condition"
+    csv: "CSV"
+    xls: "Excel"
   update:
     button: "Save changes"
     message: "Profile updated"
