@@ -1,0 +1,8 @@
+<% provide :title, t("word.list_words") %>
+<div class="container">
+  <h2><%= t "word.list_words" %></h2>
+  <%= link_to t("word.add"), "#", class: "btn btn-primary" %>
+  <div>
+    <%= render "list_words" %>
+  </div>
+</div>

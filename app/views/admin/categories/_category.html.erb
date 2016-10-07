@@ -2,6 +2,6 @@
   <td><%= category.title %></td>
   <td><%= category.quantity_question %></td>
   <td>
-    <%= link_to t("show"), "#" %>
+    <%= link_to t("show"), admin_words_path(category_id: category.id) %>
   </td>
 </tr>

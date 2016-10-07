@@ -1,0 +1,12 @@
+<table class="table">
+  <thead>
+    <tr>
+      <td><%= t "word.word" %></td>
+      <td><%= t "word.mean" %></td>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @words %>
+  </tbody>
+</table>
+<%= will_paginate %>
