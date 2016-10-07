@@ -29,4 +29,17 @@ class Word < ActiveRecord::Base
       ON r.answer_id = a.id WHERE lesson_id IN (SELECT id FROM lessons
         WHERE user_id = ?) and a.is_correct = ?)", user_id, false
   end
+
+  class << self
+    def to_csv
+      CSV.generate do |csv|
+        csv << [I18n.t("word.word"), I18n.t("word.mean")]
+        all.each do |word|
+          word.answers.each do |answer|
+            csv << [word.content, answer.content] if answer.is_correct
+          end
+        end
+      end
+    end
+  end
 end
