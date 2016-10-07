@@ -45,6 +45,9 @@ en:
     title: "Title"
     quanlity_word: "Quanlity word in a lesson"
     start_lesson: "Start Lesson"
+    message_success: "Create category success"
+    message_failed: "Create category failed"
+    btn_create: "Create"
   word:
     list_words: "List words"
     word: "Word"

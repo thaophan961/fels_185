@@ -16,7 +16,7 @@ Rails.application.routes.draw do
     resources :followers, only: :index
   end
   resources :registers, only: [:new, :create]
-  resources :categories, only: :index
+  resources :categories, only: [:index, :new, :create]
   resources :words, only: :index
   resources :lessons
   resources :relationships, only: [:create, :destroy]
