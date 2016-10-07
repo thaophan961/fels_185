@@ -42,6 +42,7 @@ en:
   symbol_stroke: "|"
   learned: "Learned"
   words: "words"
+  show: "Show"
   category:
     categories: "Categories"
     search_categories: "Search categories by title"
@@ -50,7 +51,7 @@ en:
     start_lesson: "Start Lesson"
     message_success: "Create category success"
     message_failed: "Create category failed"
-    btn_create: "Create"
+    btn_create: "Create a new category"
   word:
     list_words: "List words"
     word: "Word"
