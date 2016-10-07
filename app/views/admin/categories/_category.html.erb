@@ -3,5 +3,8 @@
   <td><%= category.quantity_question %></td>
   <td>
     <%= link_to t("show"), admin_words_path(category_id: category.id) %>
+    <%= link_to t("edit"), edit_admin_category_path(category) %>
+    <%= link_to t("delete"), [:admin, category], method: :delete,
+      data: {confirm: t("admin.destroy_confirm")} %>
   </td>
 </tr>
