@@ -42,6 +42,7 @@ en:
   symbol_stroke: "|"
   learned: "Learned"
   words: "words"
+  show: "Show"
   category:
     categories: "Categories"
     search_categories: "Search categories by title"
