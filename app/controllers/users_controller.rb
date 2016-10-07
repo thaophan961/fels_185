@@ -9,6 +9,7 @@ class UsersController < ApplicationController
       per_page: Settings.per_page_activities
     @count_following = @user.following.size
     @count_followers = @user.followers.size
+    @words = Word.includes(:answers).learned @user.id
   end
 
   def edit

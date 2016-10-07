@@ -7,6 +7,11 @@
       <h3>
         <%= t "helloname", name: @user.name %>
       </h3>
+      <p>
+        <%= t "learned" %>
+        <%= @words.length %>
+        <%= t "words" %>
+      </p>
     </section>
     <section class="stats">
       <%= render "shared/stats" %>
