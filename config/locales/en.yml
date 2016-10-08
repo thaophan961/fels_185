@@ -57,6 +57,7 @@ en:
     destroy_error: "Delete unsuccess"
     destroy_failed: "Can't delete this category. It have children data!"
     update_title: "Update category"
+    not_found: "Category not found!!!"
   word:
     list_words: "List words"
     word: "Word"
@@ -64,6 +65,12 @@ en:
     search_word: "Search words by condition"
     csv: "CSV"
     xls: "Excel"
+    delete_success_message: "Word has been delete"
+    not_found: "Word not found!!!"
+    delete_fail_message: "Delete word fail!!!"
+    answer_quanlity_error: "at least 2 answers"
+    warning_answer_limit: "Maximum of Answers is 6"
+    must_has_correct_answer_error: "must has correct answer"
   update:
     button: "Save changes"
     message: "Profile updated"
@@ -84,6 +91,8 @@ en:
     wrong: "Wrong answer"
     correct: "Correct answer"
     correct_answer: "Correct answer is: "
+    not_word: "This Lesson has not any words!!!"
+    cannot_start_message: "This category hasn't words, can't start Lesson"
   index_user:
     message: "Please log in."
     title: "All users"
@@ -100,6 +109,19 @@ en:
     result:
       success: "success"
       failed: "failed"
+    word:
+      title: "Admin manager words"
+      btn_create: "Create"
+      create_success: "Word has been created success"
+      answer: "Answer"
+      category_not_found: "Category not found!!!"
+      update_success: "Word has been updated success"
+      btn_update: "Update"
+      create_word: "Create Word"
+      update_word: "Update Word"
+      add_answer: "Add answer"
+      answer_placeholder: "Type answer's content here"
+      remove: "Remove"
   time:
     formats:
       date_exam: "%d/%m/%Y %H:%M"
@@ -111,4 +133,3 @@ en:
       title: "Following"
     followers:
       title: "Followers"
-

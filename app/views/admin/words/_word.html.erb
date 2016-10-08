@@ -6,12 +6,14 @@
     <% end %>
   </td>
   <td>
-    <%= link_to "#" do %>
+    <%= link_to edit_admin_category_word_path(@category, word),
+      data: {turbolinks: false} do %>
       <span class="glyphicon glyphicon-edit"></span>
     <% end %>
   </td>
   <td>
-    <%= link_to "#" do %>
+    <%= link_to admin_category_word_path(@category, word), method: :delete,
+      data: {confirm: t("admin.destroy_confirm")} do %>
       <span class="glyphicon glyphicon-trash"></span>
     <% end %>
   </td>

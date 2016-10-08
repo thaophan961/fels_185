@@ -1,11 +1,13 @@
-<tr>
-  <th><%= category.title %></th>
-  <th><%= category.quantity_question %></th>
-  <th>
-    <%= form_for @lesson do |f| %>
-      <%= f.hidden_field :category_id, value: category.id %>
-      <%= f.submit t("category.start_lesson"),
-        class: "btn btn-primary btn-category" %>
-    <% end %>
-  </th>
-</tr>
+<% if category.words.any? %>
+  <tr>
+    <th><%= category.title %></th>
+    <th><%= category.quantity_question %></th>
+    <th>
+      <%= form_for @lesson do |f| %>
+        <%= f.hidden_field :category_id, value: category.id %>
+        <%= f.submit t("category.start_lesson"),
+          class: "btn btn-primary btn-category" %>
+      <% end %>
+    </th>
+  </tr>
+<% end %>
