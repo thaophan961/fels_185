@@ -1,5 +1,6 @@
 <% provide :title, t("category.categories") %>
 <div class="container">
+  <%= render "search_index_categories" %>
   <h2><%= t "list_categories" %></h2>
   <h2><%= link_to t("category.btn_create"), new_admin_category_path,
     class: "btn btn-primary" %></h2>
