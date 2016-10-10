@@ -50,6 +50,9 @@ en:
     title: "Title"
     quanlity_word: "Quanlity word in a lesson"
     start_lesson: "Start Lesson"
+    btn_create: "Create"
+    message_success: "Success"
+    message_failed: "Failed"
   word:
     list_words: "List words"
     word: "Word"
