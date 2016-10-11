@@ -1,0 +1,18 @@
+<div class="row mg-bt-12">
+  <div class="col-md-6">
+    <%= form_tag admin_category_words_path, method: :get, remote: true,
+      id: "search-form" do %>
+      <div class="input-group col-md-8">
+        <%= text_field_tag :search_word, params[:search_word],
+          class: "search-query form-control",
+          placeholder: t("word.search_word") %>
+        <span class="input-group-btn">
+          <%= button_tag type: "submit",
+            class: "btn btn-success margin-zero" do %>
+            <i class="glyphicon glyphicon-search"></i>
+          <% end %>
+        </span>
+      </div>
+    <% end %>
+  </div>
+</div>

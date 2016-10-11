@@ -1,8 +1,12 @@
 <% provide :title, t("word.list_words") %>
 <div class="container">
-  <h2><%= t "word.list_words" %></h2>
-  <%= link_to t("word.add"), "#", class: "btn btn-primary" %>
-  <div>
+  <h2 class="word-list"><%= t "word.list_words" %></h2>
+  <div class="row">
+    <%= render "search_word" %>
+    <%= link_to t("add"), new_admin_category_word_path,
+      data: {turbolinks: false}, class: "btn btn-primary" %>
+  </div>
+  <div id ="search_words">
     <%= render "list_words" %>
   </div>
 </div>

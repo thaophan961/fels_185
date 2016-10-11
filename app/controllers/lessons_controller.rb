@@ -11,21 +11,31 @@ class LessonsController < ApplicationController
   end
 
   def update
-    if @lesson.update_attributes lesson_params
-      flash[:success] = t "lesson.finish_message"
-      redirect_to lesson_path @lesson
+    if @lesson.words.any?
+      if @lesson.update_attributes lesson_params
+        flash[:success] = t "lesson.finish_message"
+        redirect_to @lesson
+      else
+        render :edit
+      end
     else
-      render :edit
+      flash[:danger] = t "lesson.not_word"
+      redirect_to @lesson
     end
   end
 
   def create
     @lesson = current_user.lessons.build lesson_params
-    if @lesson.save
-      flash[:success] = t "lesson.success_create_message"
-      redirect_to edit_lesson_path @lesson
+    if @lesson.category.words.any?
+      if @lesson.save
+        flash[:success] = t "lesson.success_create_message"
+        redirect_to edit_lesson_path @lesson
+      else
+        flash[:danger] = t "lesson.fail_create_message"
+        redirect_to categories_path
+      end
     else
-      flash[:danger] = t "lesson.fail_create_message"
+      flash[:danger] = t "lesson.cannot_start_message"
       redirect_to categories_path
     end
   end

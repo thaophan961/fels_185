@@ -1,0 +1,17 @@
+<div class="form-group choice_question">
+  <%= f.label "admin.word.answer" %>
+  <div class="col-md-12">
+    <div class="col-md-8 form-group">
+      <%= f.text_area :content, label: false,
+        placeholder: t("admin.word.answer_placeholder"),
+        class: "form-control" %>
+    </div>
+    <div class="col-md-3">
+      <%= f.check_box :is_correct, class: "answers_checkbox" %>
+      <%= f.label :is_correct %>
+    </div>
+    <div class="col-md-1">
+      <%= link_to_remove_fields t("admin.word.remove"), f %>
+    </div>
+  </div>
+</div>
