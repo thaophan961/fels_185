@@ -1,10 +1,12 @@
 <div class="container">
   <div class="row center">
-    <div class="col-sm-6 col-sm-offset-3">
+    <div class="col-sm-6 col-sm-offset-3 margin-top">
       <%= form_tag words_path, method: :get, class: "form-inline" do %>
         <%= search_field_tag :search_word, params[:search_word],
           placeholder: t("word.search_word"), class: "form-control" %>
-        <%= submit_tag t("search"), name: nil, class: "btn-success" %>
+        <%= button_tag(type: 'submit', class: "btn-primary") do %>
+          <span class="glyphicon glyphicon-search"></span>
+        <% end %>
       <% end %>
     </div>
   </div>

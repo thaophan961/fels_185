@@ -1,4 +1,5 @@
-<li>
-  <%= image_tag user.avatar.url, class: "image_avatar margin-left" %>
-  <h3><%= link_to user.name, user, class: "margin-left" %></h3>
-</li>
+<tr>
+  <td><%= image_tag user.avatar.url, class: "image_avatar" %></td>
+  <td><%= link_to user.name, user %></td>
+  <td><%= link_to user.email, user %></td>
+</tr>

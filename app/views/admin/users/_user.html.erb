@@ -1,10 +1,15 @@
-<li>
-  <%= image_tag user.avatar.url, class: "image" %>
-  <h3><%= link_to user.name, user %>
-    <% if current_user.is_admin? && !current_user?(user) %>
-      | <%= link_to t("delete"), user, method: :delete,
-        data: {confirm: t("admin.destroy_confirm")} %>
-      | <%= link_to t("edit"), edit_admin_user_path(user) %>
+<tr>
+  <td><%= link_to user.name, user %></td>
+  <td><%= image_tag user.avatar.url, class: "image_avatar" %></td>
+  <td>
+    <%= link_to edit_admin_user_path(user) do %>
+      <span class="glyphicon glyphicon-edit"></span>
     <% end %>
-  </h3>
-</li>
+  </td>
+  <td>
+    <%= link_to [:admin, user], method: :delete,
+      data: {confirm: t("admin.destroy_confirm")} do %>
+      <span class="glyphicon glyphicon-trash"></span>
+    <% end %>
+  </td>
+</tr>

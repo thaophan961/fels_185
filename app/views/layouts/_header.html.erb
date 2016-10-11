@@ -3,8 +3,12 @@
     <%= link_to t("name_system") , "#", id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to t("home"), root_path %></span> </li>
-        <li><%= link_to t("sign_up"), sign_up_path %></li>
+        <li>
+          <%= link_to root_path do%>
+            <span class="glyphicon glyphicon-home"></span>
+            <%= t("home") %>
+          <% end %>
+        </li>
         <% if logged_in? %>
           <% if current_user.is_admin? %>
             <li class="dropdown">
@@ -39,6 +43,7 @@
             </ul>
           </li>
         <% else %>
+          <li><%= link_to t("sign_up"), sign_up_path %></li>
           <li><%= link_to t("sign_in"), sign_in_path %></li>
         <% end %>
       </ul>

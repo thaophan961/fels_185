@@ -77,6 +77,8 @@ en:
     title_page: "Edit user"
     title: "Update your profile"
     confirmation: "Confirmation"
+    admin:
+      title: "Update user profile"
   lesson:
     success_create_message: "Start Lesson is success. Good luck to you!"
     fail_create_message: "Has a fail create, cannot create Lesson!!!"
@@ -133,3 +135,7 @@ en:
       title: "Following"
     followers:
       title: "Followers"
+  User:
+    name: "Name"
+    avatar: "Avatar"
+    email: "Email"

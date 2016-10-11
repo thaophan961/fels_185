@@ -202,6 +202,34 @@ aside {
   margin: 0;
 }
 
-.margin-left {
+.margin-left{
   margin-left: 10px;
+}
+
+.margin-top{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.search-field{
+  height: 40px;
+}
+
+.btn-create{
+  display: inline-block;
+  margin-top: -10px;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.428571429;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  background-color: #428bca;
+  margin-left: 538px;
+  color: #fff;
 }

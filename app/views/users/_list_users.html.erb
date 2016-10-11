@@ -1,0 +1,11 @@
+<table class="table table-striped">
+  <thead class="category-title">
+    <th><%= t "User.avatar" %></th>
+    <th><%= t "User.name" %></th>
+    <th><%= t "User.email" %></th>
+  </thead>
+  <tbody>
+    <%= render @users %>
+  </tbody>
+</table>
+<%= will_paginate %>
