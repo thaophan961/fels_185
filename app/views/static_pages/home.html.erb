@@ -2,27 +2,33 @@
   <%= yield %>
   <% if logged_in? %>
     <div class="row">
-      <aside class="col-md-4">
+      <aside class="col-md-3">
         <section class="user_info">
           <%= render "shared/user_info" %>
         </section>
       </aside>
       <div class="col-md-8">
-        <aside class="col-md-4">
-          <%= link_to t("btn_word"), words_path,
-            class: "btn btn-primary btn-large" %>
-        </aside>
-        <aside class="col-md-4">
-          <%= link_to t("btn_lesson"), categories_path,
-            class: "btn btn-primary btn-large" %>
-        </aside>
-      </div>
-      <div class="col-md-8 panel panel-success">
-        <div class="panel-heading">
-          <h1 class="panel-title title_header"><%= t "activities" %></h1>
+        <div class="row">
+          <div class="col-md-4">
+            <%= link_to words_path, class: "btn btn-info btn-large" do %>
+              <i class="glyphicon glyphicon-hand-right">
+              <%= t "btn_word" %></i>
+            <% end %>
+          </div>
+          <div class="col-md-4">
+            <%= link_to categories_path, class: "btn btn-info btn-large" do %>
+              <i class="glyphicon glyphicon-hand-right">
+              <%= t "btn_lesson" %></i>
+            <% end %>
+          </div>
         </div>
-        <div class="panel-body title_body">
-          <%= render "shared/feed_activities" %>
+        <div class="col-md-12 panel panel-success">
+          <div class="panel-heading">
+            <h1 class="panel-title title_header"><%= t "activities" %></h1>
+          </div>
+          <div class="panel-body title_body">
+            <%= render "shared/feed_activities" %>
+          </div>
         </div>
       </div>
     </div>
