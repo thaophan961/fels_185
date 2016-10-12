@@ -1,13 +1,14 @@
 <div class="container">
-  <div class="row">
-    <div class="col-sm-6 col-sm-offset-3">
+  <div class="row center">
+    <div class="col-sm-6 col-sm-offset-3 margin-top">
       <%= form_tag categories_path, method: :get, remote: true,
         class: "form-inline" do %>
         <%= search_field_tag :search_category, params[:search_category],
           placeholder: t("category.search_categories"),
-          class: "form-control" %>
-        <%= submit_tag t("search"), name: nil,
-          class: "btn-success" %>
+          class: "form-control search-field" %>
+        <%= button_tag(type: "submit", class: "btn-primary") do %>
+          <span class="glyphicon glyphicon-search"></span>
+        <% end %>
       <% end %>
     </div>
   </div>

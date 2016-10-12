@@ -1,9 +1,9 @@
 <% provide :title, t("category.categories") %>
 <div class="container">
+  <h2 class="word-list"><%= t "list_categories" %></h2>
   <%= render "search_index_categories" %>
-  <h2><%= t "list_categories" %></h2>
   <h2><%= link_to t("category.btn_create"), new_admin_category_path,
-    class: "btn btn-primary" %></h2>
+    class: "btn-create" %></h2>
   <div id ="categories_filter">
     <%= render "list_categories" %>
   </div>

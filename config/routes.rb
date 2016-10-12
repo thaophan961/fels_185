@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     root "users#index", path: "/"
-    resources :users, only: [:edit, :update, :index]
+    resources :users, except: [:new, :create, :show]
     resources :words, only: :index
     resources :categories do
       resources :words, except: :show

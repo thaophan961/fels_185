@@ -5,6 +5,7 @@ class RelationshipsController < ApplicationController
     @user = User.find_by id: params[:followed_id]
     verify_user
     current_user.follow @user
+    @count_followers = @user.followers.size
     responds
   end
 
@@ -12,6 +13,7 @@ class RelationshipsController < ApplicationController
     @user = Relationship.find_by(id: params[:id]).followed
     verify_user
     current_user.unfollow @user
+    @count_followers = @user.followers.size
     responds
   end
 

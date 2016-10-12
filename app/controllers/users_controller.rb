@@ -2,7 +2,6 @@ class UsersController < ApplicationController
   before_action :logged_in_user
   before_action :load_user, except: [:index, :new, :create]
   before_action :correct_user, only: [:edit, :update]
-  before_action :verify_admin, only: [:destroy, :update]
 
   def show
     @activities = @user.lessons.recent.paginate page: params[:page],
@@ -27,15 +26,6 @@ class UsersController < ApplicationController
   def index
     @users = User.alphabet.paginate page: params[:page],
       per_page: Settings.per_page
-  end
-
-  def destroy
-    if @user.destroy
-      flash[:success] = t "admin.destroy_message"
-    else
-      flash[:danger] = t "admin.message"
-    end
-    redirect_to users_path
   end
 
   private

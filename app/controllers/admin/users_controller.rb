@@ -1,5 +1,11 @@
 class  Admin::UsersController < Admin::BaseController
-  before_action :load_user, :check_current_admin, only: [:edit, :update]
+  before_action :load_user, :check_current_admin, only: [:edit, :update,
+    :destroy]
+
+  def index
+    @users = User.alphabet.paginate page: params[:page],
+      per_page: Settings.per_page
+  end
 
   def edit
   end
@@ -7,16 +13,20 @@ class  Admin::UsersController < Admin::BaseController
   def update
     if @user.update_attributes user_params
       flash[:success] = t "admin.result.success"
-      redirect_to users_path
+      redirect_to admin_users_path
     else
       flash[:danger] = t "admin.result.failed"
       render :edit
     end
   end
 
-  def index
-    @users = User.alphabet.paginate page: params[:page],
-      per_page: Settings.per_page
+  def destroy
+    if @user.destroy
+      flash[:success] = t "admin.destroy_message"
+    else
+      flash[:danger] = t "admin.message"
+    end
+    redirect_to admin_users_path
   end
 
   private
