@@ -1,6 +1,6 @@
-<%= form_for words_path, method: :get do |f| %>
-  <div class="row center">
-    <div class="col-md-8 col-md-offset-3">
+<div class="panel-body">
+  <%= form_for words_path, method: :get do |f| %>
+    <div class="row center">
       <%= t "category.categories" %>
       <%= select_tag "category_id",
         options_from_collection_for_select(@categories, "id", "title",
@@ -8,8 +8,9 @@
         class: "form-control form-small" %>
       <%= render "filter_form" %>
     </div>
-  </div>
-  <div class="center">
-    <%= f.submit t("filter"), class: "btn btn-primary" %>
-  </div>
-<% end %>
+    <div class="center">
+      <%= f.submit t("filter"), class: "btn btn-primary" %>
+    </div>
+  <% end %>
+</div>
+

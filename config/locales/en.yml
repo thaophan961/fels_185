@@ -44,6 +44,9 @@ en:
   words: "words"
   show: "Show"
   add: "Add Word"
+  about: "About"
+  link_about: "http://framgia.com"
+  framgia_logo: "Framgia logo"
   category:
     categories: "Categories"
     search_categories: "Search categories by title"
@@ -107,7 +110,7 @@ en:
     management_user: "User management"
     management_category: "Category management"
     management_word: "Word management"
-    role: "Admin"
+    role: "Admin manager"
     result:
       success: "success"
       failed: "failed"

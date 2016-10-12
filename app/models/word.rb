@@ -5,6 +5,7 @@ class Word < ActiveRecord::Base
   validates :content, presence: true,
     length: {maximum: Settings.maximum_length_content_word}
   validate :answers_quantity
+  validates :content, uniqueness: true
   scope :recent, ->{order "created_at DESC"}
   scope :random, ->{order "RANDOM()"}
   scope :search_by_condition, ->condition do

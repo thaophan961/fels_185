@@ -1,9 +1,17 @@
 <div class="container">
-  <%= render "search_words" %>
-  <div class="row">
-    <%= render "search_form" %>
+  <h2 class="text-center word-list"><%= t "word.list_words" %></h2>
+  <div class="center"><%= render "search_words" %></div>
+  <div class="panel-group">
+    <div class="panel panel-info">
+      <div class="panel-heading text-center">
+        <%= t "word.index.filter" %>
+      </div>
+      <div class="panel-body">
+        <%= render "search_form" %>
+      </div>
+    </div>
   </div>
-  <div class="col-md-9 col-md-offset-2">
+  <div>
     <%= t "download" %>
     <%= link_to t("word.csv"), words_path(category_id: params[:category_id],
       condition: params[:condition], format: Settings.csv) %>
@@ -11,8 +19,7 @@
     <%= link_to t("word.xls"), words_path(category_id: params[:category_id],
       condition: params[:condition], format: Settings.xls) %>
   </div>
-  <h2 class="word-list"><%= t "word.list_words" %></h2>
-  <div class="col-md-9 col-md-offset-2">
+  <div>
     <div id ="words_record">
       <%= render "list_words" %>
     </div>

@@ -1,5 +1,17 @@
-<footer class="footer">
-  <small>
-    <p><%= t "name_system" %></p>
-  </small>
-</footer>
+<div class="container margin-top-fix">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="brand-centered">
+        <span><%= t "title_system" %></span>
+      </div>
+      <div class="navbar-collapse collapse">
+        <div class="nav navbar-nav navbar-left">
+          <%= image_tag "framgia-logo.png", class: "image-logo" %>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li><%= link_to t("about"), t("link_about") %></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
