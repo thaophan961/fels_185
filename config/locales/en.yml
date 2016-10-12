@@ -58,9 +58,12 @@ en:
     message_failed: "Failed"
     destroy_message: "Category deleted"
     destroy_error: "Delete unsuccess"
-    destroy_failed: "Can't delete this category. It have children data!"
+    destroy_failed: "Can't delete this category. It have children data!
+      You can block this category at button update"
     update_title: "Update category"
     not_found: "Category not found!!!"
+    message_error: "This category is block"
+    is_block: "Block"
   word:
     list_words: "List words"
     word: "Word"

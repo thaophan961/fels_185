@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     resources :categories do
       resources :words, except: :show
     end
+    resources :block, only: [:edit, :update]
   end
 
   root "static_pages#home"

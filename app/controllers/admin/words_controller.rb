@@ -1,6 +1,7 @@
 class Admin::WordsController < Admin::BaseController
   before_action :load_word, except: [:index, :new, :create]
   before_action :load_category, except: [:show, :new]
+  before_action :verify_category_is_block, except: :index
 
   def index
     @words = @category.words.includes(:answers)
@@ -64,5 +65,13 @@ class Admin::WordsController < Admin::BaseController
   def word_params
     params.require(:word).permit :content,
       answers_attributes: [:id, :content, :is_correct]
+  end
+
+  def verify_category_is_block
+    load_category
+    if @category.is_block?
+      flash[:danger] = t "category.message_error"
+      redirect_to admin_category_words_path @category
+    end
   end
 end

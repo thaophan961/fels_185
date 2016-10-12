@@ -17,4 +17,11 @@
       <span class="glyphicon glyphicon-trash"></span>
     <% end %>
   </td>
+  <td>
+    <%= form_tag admin_block_path(category.id), method: :patch do %>
+      <%= check_box_tag :is_block, {}, category.is_block,
+        onclick: "changeStatus(this)" %>
+      <%= t "category.is_block" %>
+    <% end %>
+  </td>
 </tr>
